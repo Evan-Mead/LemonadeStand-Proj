@@ -8,7 +8,11 @@ namespace Lemonade_Stand
 {
     class Recipe
     {
-
+        public double pricePerCup;
+        public int amountOfLemons;
+        public int amountOfSugarCubes;
+        public int amountOfIceCubes;
     }
+
 
 }
