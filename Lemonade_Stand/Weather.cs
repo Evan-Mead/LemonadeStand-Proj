@@ -10,11 +10,16 @@ namespace Lemonade_Stand
     {
         public string condition;
         public int temperature;
+        Random random;
         static List<string> weatherConditions;
         static int minTemp = 50;
         static int maxTemp = 95;
-    }
 
-    /*RANDO WEATHER GEN AND A RT WEATHER API*/
-    
+        public Weather()
+        {
+
+        }
+
+        /*RANDO WEATHER GEN*/
+    }
 }

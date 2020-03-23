@@ -14,8 +14,8 @@ namespace Lemonade_Stand
         static Item()
         {
 
-
         }
+
 
     }
 }

@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    public class Day
+    class Day
     {
         public Weather weather;
         public List<Customer> customers;
     }
-
 
 }

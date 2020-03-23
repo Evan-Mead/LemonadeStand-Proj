@@ -8,7 +8,7 @@ namespace Lemonade_Stand
 {
     class Player
     {
-
+        public string name;
         public Inventory inventory;
         public Pitcher pitcher;
         public Recipe recipe;
@@ -21,7 +21,7 @@ namespace Lemonade_Stand
             recipe = new Recipe();
             wallet = new Wallet();
         }
+
+
     }
-
-
 }
