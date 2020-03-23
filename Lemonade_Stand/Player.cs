@@ -22,6 +22,25 @@ namespace Lemonade_Stand
             wallet = new Wallet();
         }
 
+        public void ShowInventory()
+        {
+            // NEEDS A MENU THAT SHOWS INVENTORY AND THAT LINKS TO THE STORE TO BUY ITEMS
+            // SWITCH/CASE 
+        }
 
+        public void CupsInPitcher()
+        {
+            // NEEDS TO SHOW CUPS REMANING PER INGREDIENTS IN PITCHER
+        }
+
+        public void MakeRecipe()
+        {
+            // NEEDS A MENU THAT CAN +/- ITEMS TO THE RECIPE
+        }
+
+        public void MoneyInWallet()
+        {
+            // NEEDS TO SHOW +/- MONEY IN WALLET
+        }
     }
 }

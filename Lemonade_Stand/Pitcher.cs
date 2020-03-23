@@ -12,7 +12,7 @@ namespace Lemonade_Stand
 
         public Pitcher()
         {
-            cupsReamaining = new int();
+            cupsReamaining = 10;
         }
     }
 }

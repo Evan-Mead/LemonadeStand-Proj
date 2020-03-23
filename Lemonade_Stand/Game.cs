@@ -8,18 +8,20 @@ namespace Lemonade_Stand
 {
     public class Game
     {
-        public Player player;
-        public Day currentDay;
-        public int totalDays;
-        public int dayNUmber = 0;
+        private Player player;
+        private List<Day> days;
+        private int currentDay;
 
         public Game()
         {
-            this.totalDays = 7;
-            this.player = new Player();
+            player = new Player();
+            days = new List<Day>();
+            currentDay = 0;
         }
 
-
+        // NEEDS MENU FOR BUYING INVENTORY--> ALREADY BUILT IN UI...JUST FIND A WAY TO CALL THAT HERE
+        // NEEDS DAY COUNT AND HOW MANY DAYS YOU WANT TO PLAY
+        // NEEDS TO SHOW CURRENT DAY
 
     }
 }

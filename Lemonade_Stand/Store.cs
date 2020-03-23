@@ -16,10 +16,10 @@ namespace Lemonade_Stand
 
         public Store()
         {
-            pricePerCup = .25;
-            pricePerLemon = .50;
-            pricePerIceCube = .05;
-            pricePerSugarCube = .10;
+            pricePerCup = .10;
+            pricePerLemon = .20;
+            pricePerIceCube = .01;
+            pricePerSugarCube = .05;
         }
 
         private double TransactionPrice(int itemCount, double pricePerUnit)

@@ -10,6 +10,14 @@ namespace Lemonade_Stand
     {
         public Weather weather;
         public List<Customer> customers;
-    }
 
+        public Day()
+        {
+            weather = new Weather();
+            customers = new List<Customer>();
+        }
+
+        // NEEDS TO SHOW PROJECTED WEATHER
+        // NEEDS TO BE BASED OF RANDOM % OF WEATHER AND CUSTOMERS
+    }
 }

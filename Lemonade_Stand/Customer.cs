@@ -9,10 +9,11 @@ namespace Lemonade_Stand
     class Customer
     {
         public string name;
+        private List<string> names;
 
         public Customer()
         {
-
+            // NEEDS TO BE BASED OFF PRICE PER CUP AND WEATHER
         }
 
     }

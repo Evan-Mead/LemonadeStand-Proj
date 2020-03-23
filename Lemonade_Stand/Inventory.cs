@@ -58,5 +58,6 @@ namespace Lemonade_Stand
             }
         }
 
+        // GOING TO HAVE TO REMOVE ITEMS AS WELL
     }
 }

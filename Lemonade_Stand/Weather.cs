@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace Lemonade_Stand
 {
-    public class Weather
+    class Weather
     {
         public string condition;
         public int temperature;
-        Random random;
-        static List<string> weatherConditions;
-        static int minTemp = 50;
-        static int maxTemp = 95;
+        Random random = new Random();
+        private List<string> weatherConditions;
 
         public Weather()
         {
 
         }
 
-        /*RANDO WEATHER GEN*/
+
+        // NEEDS TO BE RANDOM BASED OFF HIGH/LOW TEMP AND WEATHER CONDITIONS %'S
+        // TEMP CAN BE RANDOM BETWEEN MAX AND MIN NUMBERSGIVEN TO RANDMO RANGE random (xx, yy)
+        // NEEDS TO HAVE RANDOM WEATHER CONDITION LIST<> (SUNNY, PARTLY CLOUDY, CLOUDY, RAINY, THUNDERSTROMS)
     }
 }
