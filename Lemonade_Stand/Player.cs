@@ -13,6 +13,7 @@ namespace Lemonade_Stand
         public Pitcher pitcher;
         public Recipe recipe;
         public Wallet wallet;
+        public string cupsRemaining { get; private set; }
 
         public Player()
         {
@@ -22,26 +23,31 @@ namespace Lemonade_Stand
             wallet = new Wallet();
         }
 
+
         public void ShowInventory()
         {
-            Console.WriteLine("You have ");
-            // NEEDS A MENU THAT SHOWS INVENTORY AND THAT LINKS TO THE STORE TO BUY ITEMS
-            // SWITCH/CASE 
+            Console.WriteLine($"You have {inventory.cups.Count} remaining.");
+            Console.WriteLine($"You have {inventory.lemons.Count} remaining.");
+            Console.WriteLine($"You have {inventory.iceCubes.Count} remaining.");
+            Console.WriteLine($"You have {inventory.sugarCubes.Count} remaining.");
+
+            // SWITCH CASE MENU THAT SHOWS INVENTORY AND THAT LINKS TO THE STORE TO BUY ITEMS
         }
 
         public void CupsInPitcher()
         {
-            // NEEDS TO SHOW CUPS REMANING PER INGREDIENTS IN PITCHER
+            Console.WriteLine($"There are {cupsRemaining} in your pitcher.");
         }
 
         public void MakeRecipe()
         {
-            // NEEDS A MENU THAT CAN +/- ITEMS TO THE RECIPE
+            recipe.SetRecipe();
         }
 
         public void MoneyInWallet()
         {
             // NEEDS TO SHOW +/- MONEY IN WALLET
+            //Console.WriteLine("You have " + PayMoneyForItems + MoneyFromSales + " in your wallet.");
         }
     }
 }

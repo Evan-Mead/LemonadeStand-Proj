@@ -93,6 +93,5 @@ namespace Lemonade_Stand
                 sugarCubes.Remove(sugarCube);
             }
         }
-
     }
 }

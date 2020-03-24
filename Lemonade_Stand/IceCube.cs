@@ -13,6 +13,5 @@ namespace Lemonade_Stand
         {
             name = "ice cube";
         }
-
     }
 }

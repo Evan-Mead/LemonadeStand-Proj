@@ -19,6 +19,11 @@ namespace Lemonade_Stand
             currentDay = 0;
         }
 
+        private void CreateDays()
+        {
+
+            //same way we created customer object
+        }
         // NEEDS MENU FOR BUYING INVENTORY--> ALREADY BUILT IN UI...JUST FIND A WAY TO CALL THAT HERE
         // NEEDS DAY COUNT AND HOW MANY DAYS YOU WANT TO PLAY
         // NEEDS TO SHOW CURRENT DAY

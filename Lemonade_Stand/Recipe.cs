@@ -28,6 +28,5 @@ namespace Lemonade_Stand
             amountOfIceCubes = UI.GetUserInputInt("How many ice cubes would you like per cup?");
             amountOfSugarCubes = UI.GetUserInputInt("How many sugar cubes would you like in your recipe?");
         }
-
     }
 }

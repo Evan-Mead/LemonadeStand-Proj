@@ -9,45 +9,49 @@ namespace Lemonade_Stand
     class Day
     {
         public Weather weather;
-        public List<string> customers;
+        public List<Customer> customers;
         Random random = new Random();
 
         public Day()
         {
-            weather.condition = Weather.GenerateRandomCondition();
-            weather.temperature = Weather.GenerateRandomTemp();
-            customers = new List<string>();
-            GenerateRandomCustomers();
+            customers = new List<Customer>();
             AddCustomers();
         }
 
-        private string GenerateRandomCustomers()
+        private int GenerateAmountOfCustomers()
         {
-            customers = weather.temperature[random.Next(weatherConditions.Count)];
-            return GenerateRandomCustomers();
+            int amountOfCustomers = 0;
+            if (weather.temperature <= 95)
+            {
+                amountOfCustomers = random.Next(50, 60);
+            }
+            else if (weather.temperature <= 85)
+            {
+                amountOfCustomers = random.Next(40, 50);
+            }
+            else if (weather.temperature <= 75)
+            {
+                amountOfCustomers = random.Next(30, 40);
+            }
+            else if (weather.temperature <= 65)
+            {
+                amountOfCustomers = random.Next(20, 30);
+            }
+            else if (weather.temperature <= 55)
+            {
+                amountOfCustomers = random.Next(10, 20);
+            }
+            return amountOfCustomers;
         }
 
         private void AddCustomers()
         {
-            if(weather.temperature <= 95)
+            int amountOfCustomers = GenerateAmountOfCustomers();
+
+            for(int i = 0; i < amountOfCustomers; i++)
             {
-                customers = random.Next(50, 60);
-            }
-            else if(weather.temperature <= 85)
-            {
-                customers = random.Next(40, 50);
-            }
-            else if(weather.temperature <= 75)
-            {
-                customers = random.Next(30, 40);
-            }
-            else if(weather.temperature <= 65)
-            {
-                customers = random.Next(20, 30);
-            }
-            else if(weather.temperature <= 55)
-            {
-                customers = random.Next(10, 20);
+                // create a customer and addd the customer to the list of customers (customers)
+                customers.Add(new Customer());
             }
         }
     }
