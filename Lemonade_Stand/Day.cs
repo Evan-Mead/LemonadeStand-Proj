@@ -14,7 +14,7 @@ namespace Lemonade_Stand
         public Day()
         {
             weather = new Weather();
-            customers = new List<Customer>();
+            customers = new List<Customer>()
         }
 
         // NEEDS TO SHOW PROJECTED WEATHER

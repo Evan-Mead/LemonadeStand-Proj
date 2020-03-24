@@ -22,10 +22,67 @@ namespace Lemonade_Stand
         }
         // sets all of the variables on this class equal to user input
 
-        public void Setrecipe()
+        public string RecipeInputString(string prompt)
         {
-            amountOfLeomons = Convert.ToInt32(GetUserInputString(prompt);
+            Console.WriteLine(prompt);
+            string input = Console.ReadLine();
+            return input;
+        }
 
+        public double SetCupPriceForRecipe(string prompt)
+        {
+            try
+            {
+                double pricePerCup = Convert.ToDouble(SetCupPriceForRecipe(prompt));
+                return pricePerCup;
+            }
+            catch
+            {
+                Console.WriteLine("Invalid entry. Please enter a number.");
+                return SetCupPriceForRecipe(prompt);
+            }
+        }
+
+        public int LemonsInRecipe(string prompt)
+        {
+            try
+            {
+                int amountOfLemons = Convert.ToInt32(LemonsInRecipe(prompt));
+                return amountOfLemons;
+            }
+            catch
+            {
+                Console.WriteLine("Invalid entry. Please enter a number.");
+                return LemonsInRecipe(prompt);
+            }
+        }
+
+        public int IceCubesInInRecipe(string prompt)
+        {
+            try
+            {
+                int amountOfIceCubes = Convert.ToInt32(IceCubesInInRecipe(prompt));
+                return amountOfIceCubes;
+            }
+            catch
+            {
+                Console.WriteLine("Invalid entry. Please enter a number.");
+                return IceCubesInInRecipe(prompt);
+            }
+        }
+
+        public int SugarCubesInRecipe(string prompt)
+        {
+            try
+            {
+                int amountOfSugarCubes = Convert.ToInt32(SugarCubesInRecipe(prompt));
+                return amountOfSugarCubes;
+            }
+            catch
+            {
+                Console.WriteLine("Invalid entry. Please enter a number.");
+                return SugarCubesInRecipe(prompt);
+            }
         }
     }
 }

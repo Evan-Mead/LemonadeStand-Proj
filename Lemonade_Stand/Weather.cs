@@ -13,7 +13,7 @@ namespace Lemonade_Stand
         Random random = new Random();
         private List<string> weatherConditions;
 
-        public Weather()
+        public Weather(string condition, int temperature, List<string> weatherConditions)
         {
             weatherConditions = new List<string>() { "Sunny", "Cloudy", "Partly Cloudy", "Rainy", "Thunderstorms" };
             GenerateRandomCondition();
@@ -23,18 +23,33 @@ namespace Lemonade_Stand
 
         private string GenerateRandomCondition()
         {
-                weatherConditions = new List<string> { "Sunny", "Cloudy", "Partly Cloudy", "Rainy", "Thunderstorms" };
-                condition = weatherConditions[random.Next(weatherConditions.Count)];
-                return condition;
+            weatherConditions = new List<string> { "Sunny", "Cloudy", "Partly Cloudy", "Rainy", "Thunderstorms" };
+            condition = weatherConditions[random.Next(weatherConditions.Count)];
+            return condition;
         }
 
-        private int GenerateRandomTemperature()
+        private void GenerateRandomTemperature()
         {
-            // set temerature variable to a random number that represents temp
-            temperature = random.Next(50, 95);
-            return temperature;
+            if(GenerateRandomCondition() == "Sunny")
+            {
+                temperature = random.Next(85, 95);
+            }
+            else if(GenerateRandomCondition() == "Partly Cloudy")
+            {
+                temperature = random.Next(76, 84);
+            }
+            else if (GenerateRandomCondition() == "Cloudy")
+            {
+                temperature = random.Next(70, 75);
+            }
+            else if (GenerateRandomCondition() == "Rainy")
+            {
+                temperature = random.Next(60, 69);
+            }
+            else if (GenerateRandomCondition() == "Thunderstorms")
+            {
+                temperature = random.Next(50, 59);
+            }
         }
-
-        // NEEDS TO BE RANDOM BASED OFF HIGH/LOW TEMP AND WEATHER CONDITIONS %'S
     }
 }
