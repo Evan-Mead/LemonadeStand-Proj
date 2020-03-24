@@ -24,6 +24,7 @@ namespace Lemonade_Stand
 
         public void ShowInventory()
         {
+            Console.WriteLine("You have ");
             // NEEDS A MENU THAT SHOWS INVENTORY AND THAT LINKS TO THE STORE TO BUY ITEMS
             // SWITCH/CASE 
         }

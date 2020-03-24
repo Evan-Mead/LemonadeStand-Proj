@@ -10,12 +10,15 @@ namespace Lemonade_Stand
     {
         public string name;
         private List<string> names;
+        Random random;
+        public int customersPerDay;
 
-        public Customer()
+        public Customer(string name)
         {
-            // NEEDS TO BE BASED OFF PRICE PER CUP AND WEATHER
+            this.name = name;
         }
 
-    }
+        // NEEDS TO BE BASED OFF PRICE PER CUP AND WEATHER
 
+    }
 }

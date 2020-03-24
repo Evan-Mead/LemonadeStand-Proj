@@ -29,6 +29,6 @@ namespace Lemonade_Stand
             money -= transactionPrice;
         }
 
-        // GOING TO NEED TO SHOW MONEY FROM CUSTOMERS
+        // GOING TO NEED TO SHOW MONEY FROM CUSTOMERS-->>HOW? IS IT AS EASY AS money += transactionPrice?
     }
 }
