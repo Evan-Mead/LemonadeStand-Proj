@@ -15,12 +15,26 @@ namespace Lemonade_Stand
 
         public Weather()
         {
-
+            weatherConditions = new List<string>() { "Sunny", "Cloudy", "Partly Cloudy", "Rainy", "Thunderstorms" };
+            GenerateRandomCondition();
+            GenerateRandomTemperature();
         }
 
 
+        private string GenerateRandomCondition()
+        {
+                weatherConditions = new List<string> { "Sunny", "Cloudy", "Partly Cloudy", "Rainy", "Thunderstorms" };
+                condition = weatherConditions[random.Next(weatherConditions.Count)];
+                return condition;
+        }
+
+        private int GenerateRandomTemperature()
+        {
+            // set temerature variable to a random number that represents temp
+            temperature = random.Next(50, 95);
+            return temperature;
+        }
+
         // NEEDS TO BE RANDOM BASED OFF HIGH/LOW TEMP AND WEATHER CONDITIONS %'S
-        // TEMP CAN BE RANDOM BETWEEN MAX AND MIN NUMBERSGIVEN TO RANDMO RANGE random (xx, yy)
-        // NEEDS TO HAVE RANDOM WEATHER CONDITION LIST<> (SUNNY, PARTLY CLOUDY, CLOUDY, RAINY, THUNDERSTROMS)
     }
 }

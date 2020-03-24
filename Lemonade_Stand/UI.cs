@@ -9,6 +9,27 @@ namespace Lemonade_Stand
     static class UI
     {
 
+        public static string GetUserInputString(string prompt)
+        {
+            Console.WriteLine(prompt);
+            string input = Console.ReadLine();
+            return input;
+        }
+
+        public static int GetUserInputInt(string prompt)
+        {
+            try
+            {
+                int input = Convert.ToInt32(GetUserInputString(prompt));
+                return input;
+            }
+            catch
+            {
+                Console.WriteLine("Invalid entry. Please enter a number.");
+                return GetUserInputInt(prompt);
+            }
+        }
+
         public static int BuyNumberOfItems(string itemsToBuy)
         {
             bool userInput = false;

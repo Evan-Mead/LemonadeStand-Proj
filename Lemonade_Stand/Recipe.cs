@@ -20,5 +20,12 @@ namespace Lemonade_Stand
             amountOfIceCubes = 0;
             amountOfSugarCubes = 0;
         }
+        // sets all of the variables on this class equal to user input
+
+        public void Setrecipe()
+        {
+            amountOfLeomons = Convert.ToInt32(GetUserInputString(prompt);
+
+        }
     }
 }
