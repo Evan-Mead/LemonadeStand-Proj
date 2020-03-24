@@ -30,6 +30,20 @@ namespace Lemonade_Stand
             }
         }
 
+        public static double GetUserInputDouble(string prompt)
+        {
+            try
+            {
+                Console.WriteLine(prompt);
+                double input = Convert.ToDouble(Console.ReadLine());
+                return input;
+            }
+            catch
+            {
+                Console.WriteLine("Invalid entry. Please enter a double value.");
+                return GetUserInputDouble(prompt);
+            }
+        }
         public static int BuyNumberOfItems(string itemsToBuy)
         {
             bool userInput = false;

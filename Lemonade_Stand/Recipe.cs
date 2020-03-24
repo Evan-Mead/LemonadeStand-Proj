@@ -20,69 +20,14 @@ namespace Lemonade_Stand
             amountOfIceCubes = 0;
             amountOfSugarCubes = 0;
         }
-        // sets all of the variables on this class equal to user input
 
-        public string RecipeInputString(string prompt)
+        public void SetRecipe()
         {
-            Console.WriteLine(prompt);
-            string input = Console.ReadLine();
-            return input;
+            pricePerCup = UI.GetUserInputDouble("How much would you like to charge for a cup of lemonade?");
+            amountOfLeomons = UI.GetUserInputInt("How many lemons would you like in your recipe?");
+            amountOfIceCubes = UI.GetUserInputInt("How many ice cubes would you like per cup?");
+            amountOfSugarCubes = UI.GetUserInputInt("How many sugar cubes would you like in your recipe?");
         }
 
-        public double SetCupPriceForRecipe(string prompt)
-        {
-            try
-            {
-                double pricePerCup = Convert.ToDouble(SetCupPriceForRecipe(prompt));
-                return pricePerCup;
-            }
-            catch
-            {
-                Console.WriteLine("Invalid entry. Please enter a number.");
-                return SetCupPriceForRecipe(prompt);
-            }
-        }
-
-        public int LemonsInRecipe(string prompt)
-        {
-            try
-            {
-                int amountOfLemons = Convert.ToInt32(LemonsInRecipe(prompt));
-                return amountOfLemons;
-            }
-            catch
-            {
-                Console.WriteLine("Invalid entry. Please enter a number.");
-                return LemonsInRecipe(prompt);
-            }
-        }
-
-        public int IceCubesInInRecipe(string prompt)
-        {
-            try
-            {
-                int amountOfIceCubes = Convert.ToInt32(IceCubesInInRecipe(prompt));
-                return amountOfIceCubes;
-            }
-            catch
-            {
-                Console.WriteLine("Invalid entry. Please enter a number.");
-                return IceCubesInInRecipe(prompt);
-            }
-        }
-
-        public int SugarCubesInRecipe(string prompt)
-        {
-            try
-            {
-                int amountOfSugarCubes = Convert.ToInt32(SugarCubesInRecipe(prompt));
-                return amountOfSugarCubes;
-            }
-            catch
-            {
-                Console.WriteLine("Invalid entry. Please enter a number.");
-                return SugarCubesInRecipe(prompt);
-            }
-        }
     }
 }

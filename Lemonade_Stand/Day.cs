@@ -17,6 +17,11 @@ namespace Lemonade_Stand
             customers = new List<Customer>()
         }
 
+        // Generate Customers 
+
+
+
+
         // NEEDS TO SHOW PROJECTED WEATHER
         // NEEDS TO BE BASED OF RANDOM % OF WEATHER AND CUSTOMERS
     }

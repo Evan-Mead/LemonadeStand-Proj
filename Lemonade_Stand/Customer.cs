@@ -18,6 +18,7 @@ namespace Lemonade_Stand
             this.name = name;
         }
 
+
         // NEEDS TO BE BASED OFF PRICE PER CUP AND WEATHER
 
     }

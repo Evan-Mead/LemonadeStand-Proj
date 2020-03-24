@@ -20,33 +20,31 @@ namespace Lemonade_Stand
             GenerateRandomTemperature();
         }
 
-
         private string GenerateRandomCondition()
         {
-            weatherConditions = new List<string> { "Sunny", "Cloudy", "Partly Cloudy", "Rainy", "Thunderstorms" };
             condition = weatherConditions[random.Next(weatherConditions.Count)];
             return condition;
         }
 
         private void GenerateRandomTemperature()
         {
-            if(GenerateRandomCondition() == "Sunny")
+            if(condition == "Sunny")
             {
                 temperature = random.Next(85, 95);
             }
-            else if(GenerateRandomCondition() == "Partly Cloudy")
+            else if(condition == "Partly Cloudy")
             {
                 temperature = random.Next(76, 84);
             }
-            else if (GenerateRandomCondition() == "Cloudy")
+            else if (condition == "Cloudy")
             {
                 temperature = random.Next(70, 75);
             }
-            else if (GenerateRandomCondition() == "Rainy")
+            else if (condition == "Rainy")
             {
                 temperature = random.Next(60, 69);
             }
-            else if (GenerateRandomCondition() == "Thunderstorms")
+            else if (condition == "Thunderstorms")
             {
                 temperature = random.Next(50, 59);
             }
