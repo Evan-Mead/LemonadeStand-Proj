@@ -10,8 +10,8 @@ namespace Lemonade_Stand
     {
         static void Main(string[] args)
         {
-
-        }
-        
+            Game sim = new Game();
+            sim.RunGame();
+        } 
     }
 }

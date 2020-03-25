@@ -9,23 +9,49 @@ namespace Lemonade_Stand
     class Customer
     {
         public string name;
+        public int customers;
         private List<string> names;
+        Random random = new Random();
 
-        public Customer()
+
+        public Customer(int customers, List<string> names)
         {
-            names = new List<string>();
+
         }
-
-
-        // NEEDS TO BE BASED OFF PRICE PER CUP AND WEATHER
-        // public 
 
         public bool MakeChoice(Weather weather, Recipe recipe)
         {
-            // if else bool
+            int chanceNumber = 0;
+            if(weather.condition == "Sunny" && recipe.pricePerCup <= 0.38)
+            {
+                chanceNumber = random.Next(4, 10);
+            }
+            else if(weather.condition == "Partly Cloudy" && recipe.pricePerCup <= 0.32)
+            {
+                chanceNumber = random.Next(4, 10);
+            }
+            else if(weather.condition == "Cloudy" && recipe.pricePerCup <= 0.28)
+            {
+                chanceNumber = random.Next(4, 10);
+            }
+            else if(weather.condition == "Rainy" && recipe.pricePerCup >= 0.23)
+            {
+                chanceNumber = random.Next(2, 10);
+            }
+            else if(weather.condition == "Thunderstorms" && recipe.pricePerCup >= 0.20)
+            {
+                chanceNumber = random.Next(0, 10);
+            }
 
-            // numbers 1-7 <= 5 is true for chance to buy
-            // number 1-10 <= 5 is false for chance to not buy
+
+            if(chanceNumber > 5)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -8,7 +8,7 @@ namespace Lemonade_Stand
 {
     static class UI
     {
-
+        
         public static string GetUserInputString(string prompt)
         {
             Console.WriteLine(prompt);
@@ -28,6 +28,18 @@ namespace Lemonade_Stand
                 Console.WriteLine("Invalid entry. Please enter a number.");
                 return GetUserInputInt(prompt);
             }
+        }
+
+        public static void ShowPlayerInventory(Inventory inventory, Wallet wallet)
+        {
+            Console.WriteLine("Your current inventory: ");
+            Console.WriteLine($"Lemons: {inventory.lemons.Count}");
+            Console.WriteLine($"Ice Cubes: {inventory.iceCubes.Count}");
+            Console.WriteLine($"Sugar Cubes: {inventory.sugarCubes.Count}");
+            Console.WriteLine($"Cups: {inventory.cups.Count}");
+            Console.WriteLine($"Current Money: {wallet.Money}");
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
         }
 
         public static double GetUserInputDouble(string prompt)

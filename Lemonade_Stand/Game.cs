@@ -16,49 +16,41 @@ namespace Lemonade_Stand
         {
             player = new Player();
             days = new List<Day>();
-            currentDay = 0;
             CreateDays();
         }
 
         private void CreateDays()
         {
-            int dayNumber = currentDay;
-
-            for (int i = 0; i < dayNumber; i++)
+            for (int i = 0; i < 7; i++)
             {
                 days.Add(new Day());
             }
+        }
 
-            switch (currentDay)
+        public int PlayerMenu()
+        {
+            int userInput;
+
+            for (userInput)
             {
-                case 1:
-                    Console.WriteLine("Day 1");
-                    break;
-                case 2:
-                    Console.WriteLine("Day 2");
-                    break;
-                case 3:
-                    Console.WriteLine("Day 3");
-                    break;
-                case 4:
-                    Console.WriteLine("Day 4");
-                    break;
-                case 5:
-                    Console.WriteLine("Day 5");
-                    break;
-                case 6:
-                    Console.WriteLine("Day 6");
-                    break;
-                case 7:
-                    Console.WriteLine("Day 7");
-                    break;
+                Console.WriteLine("Select an option: ");
+                Console.WriteLine($"Check inventory\n1, Set recipe\n2, Go to store\n3, Start current day\n4");
+                switch (userInput)
+                {
+                    case 1:
+                        UI.ShowPlayerInventory(player.inventory, player.wallet);
+                        break;
+                    case 2:
+                        player.recipe.SetRecipe();
+                        break;
+                }
             }
         }
-        // NEEDS MENU FOR BUYING INVENTORY--> ALREADY BUILT IN UI...JUST FIND A WAY TO CALL THAT HERE
-        // NEEDS DAY COUNT AND HOW MANY DAYS YOU WANT TO PLAY
-        // NEEDS TO SHOW CURRENT DAY
+    // NEEDS MENU FOR BUYING INVENTORY--> ALREADY BUILT IN UI...JUST FIND A WAY TO CALL THAT HERE
+    // NEEDS DAY COUNT AND HOW MANY DAYS YOU WANT TO PLAY
+    // NEEDS TO SHOW CURRENT DAY
 
-        public void RunGame()
+    public void RunGame()
         {
 
         }

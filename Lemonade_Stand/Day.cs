@@ -50,7 +50,6 @@ namespace Lemonade_Stand
 
             for(int i = 0; i < amountOfCustomers; i++)
             {
-                // create a customer and addd the customer to the list of customers (customers)
                 customers.Add(new Customer());
             }
         }
