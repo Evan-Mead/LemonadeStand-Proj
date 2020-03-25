@@ -28,11 +28,11 @@ namespace Lemonade_Stand
             }
             else if(weather.condition == "Partly Cloudy" && recipe.pricePerCup <= 0.32)
             {
-                chanceNumber = random.Next(4, 10);
+                chanceNumber = random.Next(3, 10);
             }
             else if(weather.condition == "Cloudy" && recipe.pricePerCup <= 0.28)
             {
-                chanceNumber = random.Next(4, 10);
+                chanceNumber = random.Next(3, 10);
             }
             else if(weather.condition == "Rainy" && recipe.pricePerCup >= 0.23)
             {
@@ -44,7 +44,7 @@ namespace Lemonade_Stand
             }
 
 
-            if(chanceNumber > 5)
+            if(chanceNumber >= 5)
             {
                 return true;
             }

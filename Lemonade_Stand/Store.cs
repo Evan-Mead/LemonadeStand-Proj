@@ -9,10 +9,11 @@ namespace Lemonade_Stand
     class Store
     {
 
-        private double pricePerCup;
-        private double pricePerLemon;
-        private double pricePerIceCube;
-        private double pricePerSugarCube;
+        public double pricePerCup;
+        public double pricePerLemon;
+        public double pricePerIceCube;
+        public double pricePerSugarCube;
+        public string choice;
 
         public Store()
         {
@@ -26,6 +27,26 @@ namespace Lemonade_Stand
         {
             double costOfTransaction = itemCount + pricePerUnit;
             return costOfTransaction;
+        }
+
+        public void Menu(Player player)
+        {
+            switch (choice)
+            {
+                case "Cups":
+                    SellCups(player);
+                    break;
+                case "Lemons":
+                    SellLemons(player);
+                    break;
+                case "Ice Cubes":
+                    SellIceCubes(player);
+                    break;
+                case "Sugar Cubes":
+                    break;
+                case "Exit":
+                    return;
+            }
         }
 
         private void PerformTransaction(Wallet wallet, double costOfTransaction)
