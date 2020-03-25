@@ -8,6 +8,7 @@ namespace Lemonade_Stand
 {
     static class UI
     {
+
         public static void StoreMenu(Store store)
         {
             Console.WriteLine("Welcome to the store!");

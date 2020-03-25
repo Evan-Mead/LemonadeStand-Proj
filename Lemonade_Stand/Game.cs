@@ -10,9 +10,9 @@ namespace Lemonade_Stand
     {
         private Player player;
         private List<Day> days;
-        private int currentDay;
         private Store store;
         Random random = new Random();
+        private int currentDay;
         public int userInput;
 
 
@@ -22,10 +22,9 @@ namespace Lemonade_Stand
             days = new List<Day>();
             store = new Store();
             CreateDays();
-            PlayerMenu();
         }
 
-        private void CreateDays()
+        public void CreateDays()
         {
             for (int i = 0; i < 7; i++)
             {
@@ -36,7 +35,7 @@ namespace Lemonade_Stand
         public void PlayerMenu()
         {
             Console.WriteLine("Select an option: ");
-            Console.WriteLine($"Check inventory\n1, Set recipe\n2, Go to store\n3, Start current day\n4");
+            Console.WriteLine($"\n1 Check inventory \n2 Set recipe \n3 Go to store \n4 Start current day");
             switch (userInput)
             {
                 case 1:
@@ -55,16 +54,16 @@ namespace Lemonade_Stand
                     break;
             }
         }
-            
-        
 
         public void RunGame()
         {
-            Console.WriteLine("Welcome to your lemonade stand.");
+            Console.WriteLine("Welcome to your lemonade stand!");
+
+            Console.ReadLine();
 
             List<string> gameObject = new List<string>();
             gameObject.Add("You will start with $20.00 to buy what you need from the store");
-            gameObject.Add("Everyday you will have one chance to buy from the store, change your recipe, and set a price for a single cup of lemonade.");
+            gameObject.Add("Everyday you will have one chance to buy from the store, change your recipe, and set a price for a cup.");
             gameObject.Add("Sales will be based on the weather and how expensive your price is.");
             gameObject.Add("You will have one week (seven days) to collect as much money as you can.");
             gameObject.Add("The game will continue until you have completed a full week of sales or you run out of money and can not continue sales.");
@@ -75,18 +74,22 @@ namespace Lemonade_Stand
                 Console.WriteLine(game);
             }
 
+            Console.ReadLine();
+
             PlayerMenu();
+
+            Console.ReadLine();
 
             //need a do while loop for game to run
 
-            do
-            {
-                CreateDays();
-                foreach(Player)
-                {
+            //do
+            //{
+            //    CreateDays();
+            //    foreach(Player)
+            //    {
 
-                }
-            }
+            //    }
+            //}
 
             /*as long as case 4 is selected in game menu the day should start
              * game needs to loop for for six more days

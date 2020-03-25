@@ -46,12 +46,12 @@ namespace Lemonade_Stand
 
         private void AddCustomers()
         {
-            int amountOfCustomers = GenerateAmountOfCustomers();
+            //int amountOfCustomers = GenerateAmountOfCustomers();
 
-            for(int i = 0; i < amountOfCustomers; i++)
-            {
-                customers.Add(new Customer());
-            }
+            //for(int i = 0; i < amountOfCustomers; i++)
+            //{
+            //    customers.Add(new Customer());
+            //}
         }
     }
 }
