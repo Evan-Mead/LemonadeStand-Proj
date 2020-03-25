@@ -17,12 +17,19 @@ namespace Lemonade_Stand
             player = new Player();
             days = new List<Day>();
             currentDay = 0;
+            CreateDays();
         }
+
+        public string 
 
         private void CreateDays()
         {
+            int dayNumber = currentDay;
 
-            //same way we created customer object
+            for (int i = 0; i < dayNumber; i++)
+            {
+                days.Add(new Day());
+            }
         }
         // NEEDS MENU FOR BUYING INVENTORY--> ALREADY BUILT IN UI...JUST FIND A WAY TO CALL THAT HERE
         // NEEDS DAY COUNT AND HOW MANY DAYS YOU WANT TO PLAY

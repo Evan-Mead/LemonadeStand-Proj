@@ -46,6 +46,7 @@ namespace Lemonade_Stand
 
         public void MoneyInWallet()
         {
+            wallet.
             // NEEDS TO SHOW +/- MONEY IN WALLET
             //Console.WriteLine("You have " + PayMoneyForItems + MoneyFromSales + " in your wallet.");
         }
