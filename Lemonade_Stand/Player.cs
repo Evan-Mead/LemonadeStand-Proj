@@ -31,7 +31,26 @@ namespace Lemonade_Stand
             Console.WriteLine($"You have {inventory.iceCubes.Count} remaining.");
             Console.WriteLine($"You have {inventory.sugarCubes.Count} remaining.");
 
-            // SWITCH CASE MENU THAT SHOWS INVENTORY AND THAT LINKS TO THE STORE TO BUY ITEMS
+            {
+                inventory = Inventory.BuyNumberOfItems("How many cups would you like to purchase?");
+                inventory = Inventory.BuyNumberOfItems("How many lemons would yo like to purchase?");
+                inventory = Inventory.GetUserInputInt("How many ice cubes would you like to purchase?");
+                inventory = Inventory.GetUserInputInt("How many sugar cubes would you like to purchase?");
+            }
+
+            //int  userInput;
+
+            //for (userInput)
+            //{
+            //    Console.WriteLine("Would you like to buy more items?");
+            //    Console.WriteLine($"Cups\n1, Lemons\n2, Ice Cubes\n3, Sugar Cubes\n4");
+            //    switch (userInput)
+            //    {
+            //        case 1:
+            //            Console.WriteLine("How many cups would you like to purchase?");
+            //            Console.WriteLine($"\n" );
+            //    }
+            //}
         }
 
         public void CupsInPitcher()

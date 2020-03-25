@@ -20,7 +20,7 @@ namespace Lemonade_Stand
             GenerateRandomTemperature();
         }
 
-        private string GenerateRandomCondition()
+        private string GenerateRandomCondition()    
         {
             condition = weatherConditions[random.Next(weatherConditions.Count)];
             return condition;
