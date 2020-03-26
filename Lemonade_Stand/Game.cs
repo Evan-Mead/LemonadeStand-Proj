@@ -76,23 +76,21 @@ namespace Lemonade_Stand
 
             Console.ReadLine();
 
+            int i = 0;
             do
             {
                 PlayerMenu();
                 CreateDays();
-
-                //{
-                //    if (player.wallet.Money <= 0.00)
-                //    {
-                //        Console.WriteLine("You have ran out of money. Game over!");
-                //    }
-                //    else
-                //    {
-                //        days.Add(new Day());
-                //    }
-                //    PlayerMenu();
+                i++;
+                if (player.wallet.Money >= 0.00)
+                {
+                    PlayerMenu();
+                    CreateDays();
+                }
             }
-            while (player.wallet.Money > 0.00);
+            while (i <= 7);
+
+            Console.ReadLine();
         }
     }
 }
