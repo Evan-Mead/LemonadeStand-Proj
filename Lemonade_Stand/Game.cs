@@ -76,25 +76,23 @@ namespace Lemonade_Stand
 
             Console.ReadLine();
 
-            PlayerMenu();
+            do
+            {
+                PlayerMenu();
+                CreateDays();
 
-            Console.ReadLine();
-
-            //need a do while loop for game to run
-
-            //do
-            //{
-            //    CreateDays();
-            //    foreach(Player)
-            //    {
-
-            //    }
-            //}
-
-            /*as long as case 4 is selected in game menu the day should start
-             * game needs to loop for for six more days
-             * or unitl player runs out of money
-             * if game runs for seven days then end game and display total cash*/
+                //{
+                //    if (player.wallet.Money <= 0.00)
+                //    {
+                //        Console.WriteLine("You have ran out of money. Game over!");
+                //    }
+                //    else
+                //    {
+                //        days.Add(new Day());
+                //    }
+                //    PlayerMenu();
+            }
+            while (player.wallet.Money > 0.00);
         }
     }
 }
